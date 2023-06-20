@@ -1,0 +1,12 @@
+.taskCardBody {
+    background-color: #646464;
+    box-shadow: #424242;
+    height: 300px;
+    width: 225px;
+}
+
+.spacerLine {
+    width: 100px;
+    height: 2px;
+    color: black;
+}
