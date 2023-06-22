@@ -1,21 +1,19 @@
 import React from 'react'
 import TaskCard from '../components/taskCard';
 import { useSelector, useDispatch } from 'react-redux';
+import { infoList } from '../placeholder/infoList';
 
 const MainPage = () => {
-    const exampleData = useSelector(state => state.example.data);
-    const loading = useSelector(state => state.example.loading);
-    const error = useSelector(state => state.example.error);
-
-    const dispatch = useDispatch();
-
-    // Dispatch an action
-    dispatch({ type: 'EXAMPLE_ACTION' });
 
     return(
-    <div>
-        <TaskCard></TaskCard>
-    </div>
+        <div>
+            {
+                infoList.map(index => {
+                    <TaskCard title={index.title} desc={index.desc} id={index.id}/>
+                })
+            }
+            <h1>hi</h1>
+        </div>
     );
 };
 
