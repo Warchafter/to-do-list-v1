@@ -2,8 +2,6 @@ import React from 'react'
 import TaskCard from '../components/taskCard';
 import { useSelector, useDispatch } from 'react-redux';
 
-
-
 const MainPage = () => {
     const exampleData = useSelector(state => state.example.data);
     const loading = useSelector(state => state.example.loading);
@@ -18,7 +16,7 @@ const MainPage = () => {
     <div>
         <TaskCard></TaskCard>
     </div>
-    )
-}
+    );
+};
 
 export default MainPage;
