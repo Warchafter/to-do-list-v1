@@ -6,13 +6,18 @@ import { infoList } from '../placeholder/infoList';
 const MainPage = () => {
 
     return(
-        <div>
+        <div className='grid-container-task'>
             {
-                infoList.map(index => {
-                    <TaskCard title={index.title} desc={index.desc} id={index.id}/>
+                infoList.map((key, index) => {
+                    console.log("key: ", key);
+                    console.log("index: ", index);
+                    return (
+                        <div className='grid-item-task'>
+                                <TaskCard title={index.title} desc={index.desc} id={index.id}/>
+                        </div>
+                        )
                 })
             }
-            <h1>hi</h1>
         </div>
     );
 };
