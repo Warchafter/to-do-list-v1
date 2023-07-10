@@ -1,7 +1,11 @@
 .grid-container-task {
     display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 10px;
+    row-gap: 20px;
+    grid-auto-rows: minmax(200px, auto);
 }
 
-.grid-item {}
+.grid-item-task {
+    text-align: center;
+}

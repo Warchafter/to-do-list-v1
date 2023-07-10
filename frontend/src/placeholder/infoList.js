@@ -1,16 +1,16 @@
 export const infoList = [{
         id: 1,
-        title: 'firstImage',
+        title: 'First Image',
         desc: 'Recipe API App'
     },
     {
         id: 2,
-        title: 'secondImage',
+        title: 'Second Image',
         desc: 'Card Handler App'
     },
     {
         id: 3,
-        title: 'thirdImage',
+        title: 'Third Image',
         desc: 'Management Information System'
     }
 ]

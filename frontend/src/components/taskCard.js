@@ -1,12 +1,18 @@
 import React from 'react'
 import './css/taskCard.css'
 
+
 const taskCard = (props) => {
+
     return (
         <div className='taskCardBody'>
-            <h2>{props.title}a</h2>
+            <div className='taskCardTitleContainer'>
+                <h2 className='taskCardTitle'>{props.title}</h2>
+            </div>
+            <div className='taskCardContent'>
+                <p>{props.desc}</p>
+            </div>
             <div className='spacerLine'></div>{/* this will be an spacer */}
-            <p>{props.desc}a</p>
         </div>
     );
 };
