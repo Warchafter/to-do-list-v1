@@ -1,11 +1,23 @@
+.main-page {
+    background-color: #F7F1E5;
+    margin: 0px;
+}
+
 .grid-container-task {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    gap: 10px;
-    row-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    row-gap: 45px;
+    column-gap: 25px;
     grid-auto-rows: minmax(200px, auto);
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .grid-item-task {
     text-align: center;
+}
+
+.blank-spacer {
+    height: 75px;
+    width: auto;
 }
