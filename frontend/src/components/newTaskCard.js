@@ -9,10 +9,11 @@ const newTaskCard = () => {
 
     return (
         <div className='newTaskCardBody'>
-            <div className='newTaskCardContent'>
-                <button className='newTaskButton'>+</button>
+            <div className='newTaskSpacerLine newTaskDiv1'></div>{/* this will be an spacer */}
+            <div className='newTaskCardContent newTaskDiv2'>
+                <button className='newTaskButton'>Button 80</button>
             </div>
-            <div className='newTaskSpacerLine'></div>{/* this will be an spacer */}
+            <div className='newTaskSpacerLine newTaskDiv3'></div>{/* this will be an spacer */}
         </div>
     )
 }

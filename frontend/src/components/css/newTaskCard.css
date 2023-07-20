@@ -1,66 +1,103 @@
 .newTaskCardBody {
-    background-color: #646464;
+    background-color: #424165;
     box-shadow: #424242;
     height: 340px;
     width: 225px;
-    border-style: double;
-    border-width: 5px;
+    border-style: solid;
+    border-width: 3px;
     border-color: rgb(46, 46, 46);
-    position: relative;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-items: center;
 }
 
 
 .newTaskCardContent {
-    background-color: #646464;
+    background-color: #2b2a4c5c;
+    border-style: dashed;
+    border-width: 0.5px;
+    border-color: #2b2a2a;
+    border-radius: 5px;
+    color: #dfdad8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 15px 15px;
-    border-style: dotted;
-    border-width: 2px;
-    border-color: rgb(29, 29, 32);
-    display: inline-block;
-    height: 265px;
+    height: 225px;
     width: 190px;
+    grid-area: 1 / 1 / 4 / 2;
 }
 
 .newTaskSpacerLine {
     width: 100px;
     height: 2px;
     margin-top: 18px;
-    position: absolute;
-    top: 86.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: rgb(39, 39, 39);
 }
 
+.newTaskDiv1 { grid-area: 1 / 1 / 2 / 2; }
+.newTaskDiv2 { grid-area: 2 / 1 / 5 / 2; }
+.newTaskDiv3 { grid-area: 5 / 1 / 6 / 2; }
 
 .newTaskButton {
-    background: #8e9599;
-    background-image: -webkit-linear-gradient(top, #8e9599, #4c4e4f);
-    background-image: -moz-linear-gradient(top, #8e9599, #4c4e4f);
-    background-image: -ms-linear-gradient(top, #8e9599, #4c4e4f);
-    background-image: -o-linear-gradient(top, #8e9599, #4c4e4f);
-    background-image: linear-gradient(to bottom, #8e9599, #4c4e4f);
-    -webkit-border-radius: 28;
-    -moz-border-radius: 28;
-    border-radius: 28px;
-    text-shadow: 1px 1px 3px #454445;
-    font-family: Arial;
-    color: #2e2e2e;
-    font-size: 50px;
-    padding: 10px 20px 10px 20px;
+    background: #00000015;
+    backface-visibility: hidden;
+    border-radius: .375rem;
+    border-style: solid;
+    border-width: .100rem;
+    box-sizing: border-box;
+    color: #e4e4e4;
+    cursor: pointer;
+    font-family: Circular,Helvetica,sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    line-height: 1.3;
+    padding: .875rem 1.125rem;
+    position: relative;
+    text-align: left;
     text-decoration: none;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateZ(0) scale(1);
+    transition: transform .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
-.newTaskButton:hover {
-background: #8e9599;
-background-image: -webkit-linear-gradient(top, #8e9599, #333333);
-background-image: -moz-linear-gradient(top, #8e9599, #333333);
-background-image: -ms-linear-gradient(top, #8e9599, #333333);
-background-image: -o-linear-gradient(top, #8e9599, #333333);
-background-image: linear-gradient(to bottom, #8e9599, #333333);
-text-decoration: none;
+.newTaskButton:not(:disabled):hover {
+    transform: scale(1.05);
+}
+
+.newTaskButton:not(:disabled):hover:active {
+    transform: scale(1.05) translateY(.125rem);
+}
+
+.newTaskButton:focus {
+    outline: 0 solid transparent;
+}
+
+.newTaskButton:focus:before {
+    content: "";
+    left: calc(-1*.375rem);
+    pointer-events: none;
+    position: absolute;
+    top: calc(-1*.375rem);
+    transition: border-radius;
+    user-select: none;
+}
+
+.newTaskButton:focus:not(:focus-visible) {
+    outline: 0 solid transparent;
+}
+
+.newTaskButton:focus:not(:focus-visible):before {
+    border-width: 0;
+}
+
+.newTaskButton:not(:disabled):active {
+    transform: translateY(.125rem);
 }
